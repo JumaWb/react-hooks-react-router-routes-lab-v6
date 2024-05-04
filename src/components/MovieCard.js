@@ -1,11 +1,13 @@
 import {Link} from 'react-router-dom';
+import Movie from '../pages/Movie';
 
-function MovieCard({title}) {
-  
+function MovieCard({movie}) {
+  const{title, id}=movie
   return (
     <article>
-        <h2>{title}</h2>
-        {/* What should go here? */}
+        <h2>
+        <Link to={`/movie/${id}`}>{title}</Link>
+        </h2>
     </article>
   );
 };
